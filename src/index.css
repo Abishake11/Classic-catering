@@ -1,0 +1,15 @@
+
+/* common css */
+.container-set{
+  margin: 0px 100px;
+}
+
+/* poppin family tags */
+/* it used for li,button,Link tags */
+.pop{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
