@@ -4,12 +4,41 @@
   margin: 0px 100px;
 }
 
-/* poppin family tags */
+@media (max-width:768px) {
+  .container-set{
+    margin: 0px 50px;
+  }
+}
+
+/* anchor tag */
+a{
+  text-decoration: none !important;
+}
+
+
+
+
+
+/* poppin font*/
 /* it used for li,button,Link tags */
-.pop{
+.pop, .nav-link{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* these fonts only using for homesection */
+/* lato font*/
+.lato{
+  font-family: "Lato", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+/* overpass font */
+.overpass{
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
