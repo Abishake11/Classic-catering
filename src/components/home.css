@@ -5,10 +5,10 @@
  padding-top: 180px;
  padding-bottom: 20px;
 
-    background-image: url('../assets/home\ assets/bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+ background-image: url('../assets/home\ assets/bg.png');
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 
 .home h1{
@@ -32,7 +32,6 @@
 }
 .enquiry>img{
     width: 30px;
-
 }
 .enquiry>a{
     color: #903728;

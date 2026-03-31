@@ -1,0 +1,165 @@
+.about{
+    padding: 20px 0px !important;
+    background-color: #FCF8E3;
+}
+.btn-grp{
+       background-color: #FCF8E3;
+       display: inline-flex; 
+       align-items: center;
+       padding: 5px 10px;
+       border-radius: 20px;
+       gap: 10px;
+}
+.btn-grp>h4{
+    color: #903728 !important;
+}
+.card-1{
+    background-image: url('../assets/about-assets/card-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+
+    padding: 15px;
+    border-radius: 20px;
+
+}
+.about p{
+    color: #FCF8E3;
+}
+.about h3{
+    color: #FCF8E3;
+}
+.about .icons-grp .outfit{
+    font-weight: 300;
+    font-size: 20px;
+}
+.about .btn-grp .outfit{
+    font-size: 20px;
+}.about .btn-grp>h4{
+    margin-bottom: 0px !important;
+}
+
+.card-2{
+    background-image: url('../assets/about-assets/card-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+
+    padding: 15px;
+    border-radius: 20px;
+}
+
+@media (max-width:992px) {
+    .card-2{
+     margin-top: 30px;
+    }
+}
+
+/* about content ----------------------------------------------------------------------------------------- */
+.about-content{
+    padding: 20px 0px !important;
+    background-color: #FCF8E3;
+}
+.about-content p{
+    color: #903728;
+}
+
+/* about-numbers */
+.about-numbers {
+    padding: 20px 0px !important;
+    background-color: #FCF8E3;
+}
+
+.about-numbers-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* numbers container */
+.numbers {
+    background-color: #903728;
+    color: #FCF8E3;
+    border-radius: 20px;
+    padding: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex: 1;
+
+    justify-content: space-between; /* ✅ better than evenly */
+}
+
+/* each item */
+.num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 220px; /* ✅ responsive width control */
+    gap: 50px;
+}
+
+/* text block (important for alignment) */
+.num > div:first-child {
+    text-align: center;
+}
+
+/* separator line */
+.num > div:nth-child(2) {
+    width: 1px;
+    height: 50px; /* ✅ fixed for consistency */
+    background-color: #FCF8E3;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+/* round icon */
+.round {
+    height: clamp(60px, 8vw, 100px);
+    width: clamp(60px, 8vw, 100px);
+
+    border: 2px solid #903728;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+.round > img {
+    width: 70%;
+    height: auto;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .about-numbers-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .numbers {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .num {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .num > div:nth-child(2) {
+        display: none; /* cleaner mobile */
+    }
+
+    .round {
+        margin-top: 20px;
+    }
+}

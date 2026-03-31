@@ -1,0 +1,33 @@
+.form-2{
+        background: #f6e2cc;
+    padding: 40px 0px;
+}
+.form-2 p{
+    margin: 0px;
+}
+.para{
+    color: #903728;
+}
+textarea{
+    border: none;
+    border-radius: 10px;
+    background-color: #f3cfaa;
+}
+.form-2 input{
+    background-color: #f3cfaa;;
+    border: none;
+}
+.form2-btn{
+margin-top: 15px;
+background-color: #903728;
+width: 100%;
+padding: 10px;
+display: flex;
+justify-content: center;
+border-radius: 20px;
+}
+
+.form2-btn>a{
+    color: #f6e2cc;
+    text-align: center;
+}

@@ -1,0 +1,82 @@
+
+.service{
+    padding: 40px 0px !important;
+    background-color: #FCF8E3;
+}
+.service h2{
+    max-width: 60%;
+}
+.quote {
+    background-color: #903728;
+    border-radius: 50px; 
+    display: inline-block;   
+}
+
+.quote a {
+    color: #FCF8E3;
+    white-space: nowrap;      
+    display: inline-block;
+    padding: 10px 20px;           
+}
+
+
+/* responsive */
+@media (max-width:1400px) {
+    .service a{
+        font-size: 20px;
+    }
+    .service h2{
+        max-width: 80% !important;
+    }
+
+}
+@media (max-width:992px){
+    .service h2{
+        font-size: 50px;
+        max-width: 80%;
+    }
+}
+@media (max-width:900px) {
+    .quote>a{
+       font-size: 15px !important;
+    }
+    .service h2{
+        font-size: 45px;
+    }
+}
+@media (max-width:556px) {
+    .service h2{
+        max-width: 100% !important;
+        font-size: 40px !important;
+    }
+    .quote{
+        margin-top: 25px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+.carded{
+    width: 100%;
+}
+.carded .img-grp{
+    position: relative;
+    width: 100%;
+}
+.carded .img-grp>img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carded .img-grp>img:nth-child(2){
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+}
+.carded h5, .carded p{
+    color: #903728;
+}
+

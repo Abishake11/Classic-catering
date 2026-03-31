@@ -3,6 +3,15 @@ import './home.css'
 // images import
 import call from '../assets/home assets/call.png'
 
+// components import
+import Service from './service';
+import About from './about';
+import Gallery from './gallery';
+import Formone from './formone';
+import Client from './client';
+import Formtwo from './formtwo';
+import Footer from './footer';
+
 
 function Home(){
   return(
@@ -24,6 +33,15 @@ function Home(){
          </div>
        </div>
       </section>
+
+      <Service/>
+      <About/>
+      <Gallery/>
+      <Formone/>
+      <Client/>
+      <Formtwo/>
+      <Footer/>
+
     </>
   )
 }
