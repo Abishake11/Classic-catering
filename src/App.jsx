@@ -1,52 +1,54 @@
-import './App.css'
+import { useEffect } from "react";
+import "./App.css";
 
 // packages import
-import { BrowserRouter,Routes,Route } from 'react-router'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // components import
-import Home from './components/home'
-import Navbar from './components/navbar'
+import Home from "./components/home";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
-// images import
-import fb from './assets/icon-assets/fb.png'
-import insta from './assets/icon-assets/insta.png'
-import plate from './assets/icon-assets/plate.png'
+// utils import
+import ProtectedRoute from "./utils/ProtectedRoute";
 
+// store import
+import { useAuthStore } from "./store/authStore";
+
+// components import
+import Loader from "./components/Loader";
 
 function App() {
+  const hydrate = useAuthStore((state) => state.hydrate);
+  const isHydrated = useAuthStore((state) => state.isHydrated);
 
-  return(
-    <>
-     {/* header section */}
-      <header>
-        <div className="container-set">
-          <div className="header-wrapper">
-            <div>
-             
-              <div className='taste'>
-                <img src={plate} alt="" />
-                <span className='pop'>FREE SAMPLE TASTE</span>
-              </div>
+  // 🔄 Restore session on app load
+  useEffect(() => {
+    hydrate();
+  }, []);
 
-              <img src={insta} alt="" className='insta' />
+  // ⏳ Prevent UI flicker before hydration
+  if (!isHydrated) {
+    return <Loader />; // you can replace with loader component
+  }
 
-              <img src={fb} alt="" className='fb' />
-            </div>
-          </div>
-        </div>
-      </header>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
 
-      {/* navbar */}
-      <Navbar/>
-
-      <BrowserRouter>
-       <Routes>
-           <Route path='/' element={<Home/>} />
-       </Routes>
-      </BrowserRouter>
-
-    </>
-  )
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

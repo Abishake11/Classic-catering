@@ -1,4 +1,4 @@
-
+@import "tailwindcss";
 /* common css */
 .container-set{
   margin: 0px 100px;
@@ -14,10 +14,6 @@
 a{
   text-decoration: none !important;
 }
-
-
-
-
 
 /* poppin font*/
 /* it used for li,button,Link tags */
