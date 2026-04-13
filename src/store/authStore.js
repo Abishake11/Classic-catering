@@ -35,35 +35,43 @@ export const useAuthStore = create((set) => ({
   },
 
   // 🔄 HYDRATE
-  hydrate: async () => {
-    try {
-      const token = localStorage.getItem(TOKEN_KEY);
+ hydrate: async () => {
+  try {
+    const token = localStorage.getItem(TOKEN_KEY);
+    const storedUser = localStorage.getItem(USER_KEY);
 
-      if (!token) {
-        return set({ isHydrated: true });
-      }
+    if (!token) {
+      return set({ isHydrated: true });
+    }
 
-      const res = await api.get("/auth/me");
-      const user = res.data;
-
+    // ⚡ Use cached user first
+    if (storedUser) {
       set({
         token,
-        user,
+        user: JSON.parse(storedUser),
         isLoggedIn: true,
         isHydrated: true,
       });
-    } catch (error) {
-      console.error("Hydration error:", error);
-
-      localStorage.removeItem(TOKEN_KEY);
-      localStorage.removeItem(USER_KEY);
-
-      set({
-        token: null,
-        user: null,
-        isLoggedIn: false,
-        isHydrated: true,
-      });
     }
-  },
+
+    // 🔄 Then verify in background
+    const res = await api.get("/auth/me");
+
+    set({
+      token,
+      user: res.data,
+      isLoggedIn: true,
+      isHydrated: true,
+    });
+  } catch (error) {
+    localStorage.clear();
+
+    set({
+      token: null,
+      user: null,
+      isLoggedIn: false,
+      isHydrated: true,
+    });
+  }
+}
 }));
