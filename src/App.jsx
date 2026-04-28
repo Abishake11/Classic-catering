@@ -18,6 +18,9 @@ import { useAuthStore } from "./store/authStore";
 // components import
 import Loader from "./components/Loader";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
   const hydrate = useAuthStore((state) => state.hydrate);
   const isHydrated = useAuthStore((state) => state.isHydrated);
@@ -25,6 +28,11 @@ function App() {
   // 🔄 Restore session on app load
   useEffect(() => {
     hydrate();
+    AOS.init({
+      duration: 800, // animation duration in ms
+      once: true, // animate only once (false = animate every time)
+      easing: "ease-in-out",
+    });
   }, []);
 
   // ⏳ Prevent UI flicker before hydration

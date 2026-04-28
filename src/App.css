@@ -27,6 +27,22 @@ header{
   color: #903728;
   padding: 5px 12px;
   border-radius: 20px;
+   transition: transform 0.3s ease;
+}
+.taste:hover{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1.1);
+}
+.taste:hover>span{
+  font-weight: 600;
+  scale: 1;
+}
+.insta,.fb{
+  transition: transform 0.3s ease;
+}
+.insta:hover,.fb:hover{
+    transform: scale(1.1);
+
 }
 
 @media (max-width:1185px) {
@@ -47,6 +63,12 @@ header{
   }
 }
 
+@media (max-width:576px) {
+  header{
+    display: none;
+  }
+}
+
 @media (max-width:450px) {
 
  .taste{
@@ -63,5 +85,4 @@ header{
 .fb{
   width: 15px;
 }
-
 }

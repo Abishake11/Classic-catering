@@ -4,11 +4,13 @@
   margin: 0px 100px;
 }
 
+
 @media (max-width:768px) {
   .container-set{
     margin: 0px 50px;
   }
 }
+
 
 /* anchor tag */
 a{
@@ -52,3 +54,14 @@ a{
   font-family: "gia";
 }
 
+html,body{
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+.btnanimate{
+    transition: transform 0.3s ease;
+}
+.btnanimate:hover{
+    transform: scale(1.1);
+}

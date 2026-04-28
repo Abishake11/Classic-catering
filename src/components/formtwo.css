@@ -1,6 +1,6 @@
 .form-2{
-        background: #f6e2cc;
-    padding: 40px 0px;
+        background: #f6dacf;
+    padding: 70px 0px;
 }
 .form-2 p{
     margin: 0px;
@@ -11,10 +11,10 @@
 textarea{
     border: none;
     border-radius: 10px;
-    background-color: #f3cfaa;
+    background-color: #f3caba;
 }
 .form-2 input{
-    background-color: #f3cfaa;;
+    background-color:#f3caba;
     border: none;
 }
 .form2-btn{
@@ -30,4 +30,9 @@ border-radius: 20px;
 .form2-btn>a{
     color: #f6e2cc;
     text-align: center;
+}
+.form-2 textarea{
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
 }

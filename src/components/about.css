@@ -6,23 +6,33 @@
        background-color: #FCF8E3;
        display: inline-flex; 
        align-items: center;
-       padding: 5px 10px;
+       padding: 10px 15px;
        border-radius: 20px;
        gap: 10px;
+}
+
+.btn-grp>h4{
+        transition: transform 0.3s ease;
+}
+.btn-grp>h4:hover{
+    transform: scale(1.1);
 }
 .btn-grp>h4{
     color: #903728 !important;
 }
+/* card-1 css-------------------------------------------- */
 .card-1{
     background-image: url('../assets/about-assets/card-1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 300px;
+    min-height: 330px;
 
-    padding: 15px;
+    padding: 40px;
     border-radius: 20px;
-
+}
+.card-1 h3{
+    max-width: 70%;
 }
 .about p{
     color: #FCF8E3;
@@ -40,33 +50,196 @@
     margin-bottom: 0px !important;
 }
 
-.card-2{
-    background-image: url('../assets/about-assets/card-2.png');
+.card-1>h3{
+    text-transform: uppercase;
+    max-width: 100% !important;
+}
+.card-1 .icons-grp{
+    margin-top: 0px !important;
+}
+.card-1 .icon1>img{
+    display: none;
+}
+.card-1 .icon1>p{
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+/*  both card  */
+@media (max-width:1490px) {
+    .card-1{
+        height: 380px;
+    }
+    .card-2{
+        height: 380px;
+    }
+}
+@media (max-width:1380px) {
+    .card-1{
+        height: 400px;
+    }
+    .card-2{
+        height: 400px;
+    }
+}
+@media (max-width:1170px) {
+    .card-1{
+        height: 430px;
+    }
+    .card-2{
+        height: 430px;
+    }
+}
+@media (max-width:1120px) {
+    .card-1{
+        height: 440px;
+    }
+    .card-2{
+        height: 440px;
+    }
+}
+@media (max-width:998px) {
+    .card-1{
+        height: 450px;
+    }
+    .card-2{
+        height: 450px;
+    }
+}
+@media (max-width:990px) {
+    .card-1,.card-2{
+        height: 300px;
+    }
+}
+
+@media (max-width:556px) {
+    .card-1{
+    background-image: url('../assets/about-assets/c2mob.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    height: 500px;
 
     padding: 15px;
     border-radius: 20px;
 }
 
-@media (max-width:992px) {
+}
+@media (max-width:480px) {
+    .card-1>h3{
+    text-transform: uppercase;
+    max-width: 100% !important;
+    margin-bottom: 25px;
+}
+.card-1 .icon1>p{
+    font-weight: 500 !important;
+    font-size: 12px !important;
+}
+}
+
+
+/* card-2 css---------------------------------------------- */
+.card-2{
+    background-image: url('../assets/about-assets/card-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 330px;
+
+    padding: 40px;
+    border-radius: 20px;
+}
+.card-2>h3{
+    max-width: 70%;
+}
+@media (max-width:1250px){
+    .card-2>h3{
+        max-width: 80%;
+    }
+}
+@media (max-width:990px) {
     .card-2{
      margin-top: 30px;
     }
 }
 
+
+@media (max-width:556px) {
+    .card-2{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+                background-image: url('../assets/about-assets/c1mob.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .card-2>h3{
+        max-width: 100%;
+        text-align: center;
+        font-size: 30px !important;
+        margin-top: 10px;
+        text-transform: uppercase;
+
+    }
+    .card-2>p{
+        display: none;
+    }
+    .card-2>.btn-grp{
+        width: 300px;
+        text-align: center;
+        margin: 0px auto;
+    }
+}
+@media (max-width:460px) {
+     .card-2>.btn-grp{
+        width: 65%;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .card-2>.btn-grp>h4{
+       font-size: 10px !important;
+    }
+}
+
+@media (max-width:449px) {
+     .card-2>.btn-grp{
+        width: 75%;
+        text-align: center;
+        margin: 0px auto;
+    }
+    .card-2>.btn-grp>h4{
+       font-size: 11px !important;
+    }
+}
+
+
+
+
+
+
 /* about content ----------------------------------------------------------------------------------------- */
 .about-content{
     padding: 20px 0px !important;
     background-color: #FCF8E3;
+    
 }
 .about-content p{
     color: #903728;
 }
 
-/* about-numbers */
+
+
+
+
+
+/* about-numbers------------------------------------------------------------------- */
 .about-numbers {
     padding: 20px 0px !important;
     background-color: #FCF8E3;

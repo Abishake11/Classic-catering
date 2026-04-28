@@ -40,9 +40,6 @@
   font-weight: 600;
 }
 
-.gallery-btn:hover {
-  background: #6f2f22;
-}
 @media (max-width: 768px) {
   .big {
     height: 250px;

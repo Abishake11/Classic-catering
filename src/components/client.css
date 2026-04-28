@@ -1,6 +1,6 @@
 
 .client {
-    padding: 0px 0px;
+    padding: 60px 0px;
     background-color: #FCF8E3;
 }
 .client-wrapper{
@@ -21,7 +21,18 @@
     background-color: #ffffff;
     border-radius: 18px;
     transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+.client-card>p{
+    margin: 0px !important;
+}
+.client-card p>p{
+    margin-bottom: 0px;
+}
+
 
 .client-card:hover {
     transform: translateY(-5px);
