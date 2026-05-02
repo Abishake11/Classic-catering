@@ -3,140 +3,121 @@ import star3 from "../assets/client-assets/star.png";
 
 function Client() {
   return (
-    <>
-      <section className="client" id="client">
-        <div className="container-set">
-          <div className="client-wrapper">
-            <h1 className="client-say giafita">What Our Clients Say</h1>
+    <section className="client" id="client">
+      <div className="container-set">
+        <div className="client-wrapper">
+          <h1 className="client-say giafita">What Our Clients Say</h1>
 
-            <div className="row g-4 mt-4">
-              <div
-                className="col-lg-3 col-md-6 col-sm-12"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <div className="client-card text-start p-4 h-100">
-                  <div>
-                    <h5 className="client-name">Lakshmi R</h5>
-                    <div>
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                    </div>
+          <div className="row g-4 mt-4">
+            
+            {/* CARD 1 */}
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="client-card p-4 h-100">
+                <div>
+                  <h5 className="client-name">Lakshmi R</h5>
+
+                  <div className="star-container">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star3} alt="star" className="star" />
+                    ))}
                   </div>
+                </div>
 
-                  <p className="client-text mt-3"  data-aos-duration="1200"
-  data-aos-delay="200" data-aos="fade-up">
+                <div className="client-text">
+                  <p>
                     We booked Classic Catering for my seemantham function. Food
-                    was very tasty and service also very neat. All my relatives
-                    were happy and appreciated the food. Everything was handled
-                    properly without any tension for us.
+                    was very tasty and service also very neat.
                   </p>
-
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 col-sm-12"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <div className="client-card text-start p-4 h-100">
-                  <div>
-                    <h5 className="client-name">Praksh Kumar</h5>
-
-                    <div>
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                    </div>
-                  </div>
-
-                  <p className="client-text mt-3"  data-aos-duration="1200"
-  data-aos-delay="200" data-aos="fade-up">
-                    For my sister’s wedding, we chose Classic Catering, and it
-                    turned out to be a very good decision. Around 800 people
-                    attended the function, and they managed everything smoothly
-                    without any confusion. Food was served on time for all
-                    guests, and the service flow was well organized.
-                    
                   <p className="mt-2">
-                    The taste was really good and consistent till the end, and
-                    quantity was also more than enough for everyone
-                  </p>
-                  </p>
-
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 col-sm-12"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <div className="client-card text-start p-4 h-100">
-                  <div>
-                    <h5 className="client-name">Revathi S</h5>
-
-                    <div>
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                    </div>
-                  </div>
-                  <p className="client-text mt-3"  data-aos-duration="1200"
-  data-aos-delay="200" data-aos="fade-up">
-                    We arranged catering for our housewarming function with
-                    Classic Catering. Food was simple, homely and very nice,
-                    just like how we expected for a family function. All our
-                    guests really enjoyed the food and many of them told it felt
-                    like eating at home. Quantity was also sufficient and
-                    everything was served fresh. The service team was polite,
-                    well-organized and came on time. They handled everything
-                    smoothly, so we didn’t have any tension. Overall very happy
-                    with their service and will definitely recommend to others.
-                  </p>
-
-                  <p className="client-text"></p>
-                </div>
-              </div>
-              <div
-                className="col-lg-3 col-md-6 col-sm-12"
-                data-aos="fade-up"
-                data-aos-duration="1200"
-              >
-                <div className="client-card text-start p-4 h-100">
-                  <div>
-                    <h5 className="client-name">Sarath k</h5>
-
-                    <div>
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                      <img src={star3} alt="star" className="star" />
-                    </div>
-                  </div>
-
-                  <p className="client-text"  data-aos-duration="1200"
-  data-aos-delay="200" data-aos="fade-up">
-                    We booked Classic Catering for our office event where around
-                    300 people attended. Food quality was very good and
-                    consistent throughout the event. Service was smooth and
-                    well-managed, and everything was served on time without any
-                    delay.
+                    All my relatives were happy and appreciated the food.
+                    Everything was handled properly without any tension.
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* CARD 2 */}
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="client-card p-4 h-100">
+                <div>
+                  <h5 className="client-name">Prakash Kumar</h5>
+
+                  <div className="star-container">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star3} alt="star" className="star" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="client-text">
+                  <p>
+                    For my sister’s wedding, we chose Classic Catering. Around
+                    800 people attended and everything was handled smoothly.
+                  </p>
+                  <p className="mt-2">
+                    Food was on time, well organized, and quantity was more than
+                    enough for everyone.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 3 */}
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="client-card p-4 h-100">
+                <div>
+                  <h5 className="client-name">Revathi S</h5>
+
+                  <div className="star-container">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star3} alt="star" className="star" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="client-text">
+                  <p>
+                    We arranged catering for our housewarming. Food was simple,
+                    homely and very nice.
+                  </p>
+                  <p className="mt-2">
+                    Service was polite, well-organized and everything was served
+                    fresh and on time.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 4 */}
+            <div className="col-lg-3 col-md-6 col-sm-12">
+              <div className="client-card p-4 h-100">
+                <div>
+                  <h5 className="client-name">Sarath K</h5>
+
+                  <div className="star-container">
+                    {[...Array(5)].map((_, i) => (
+                      <img key={i} src={star3} alt="star" className="star" />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="client-text">
+                  <p>
+                    We booked Classic Catering for our office event with 300+
+                    people.
+                  </p>
+                  <p className="mt-2">
+                    Food quality was consistent and everything was served on
+                    time without delay.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

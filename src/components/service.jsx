@@ -7,8 +7,10 @@ import wedcater from "../assets/service-assets/wedcater.png";
 import corcater from "../assets/service-assets/corcater.png";
 import porcater from "../assets/service-assets/porcater.png";
 import customcater from "../assets/service-assets/customcater.png";
+import WhatsAppButton from "./WhatsAppButton";
 
 import arrow from "../assets/service-assets/arrow.png";
+import { useContactApi } from "../api/ContactApi";
 
 function Service() {
   // forpopup message
@@ -18,6 +20,8 @@ function Service() {
     event: "",
     whatsapp: "",
   });
+
+  const { mutate: submitContact } = useContactApi();
 
   const handleChange = (e) => {
     setFormData({
@@ -29,11 +33,21 @@ function Service() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert(
-      `Name: ${formData.name}\nEvent: ${formData.event}\nWhatsApp: ${formData.whatsapp}`,
-    );
-
-    setShowPopup(false);
+    submitContact(formData, {
+      onSuccess: () => {
+        alert("✅ Submitted successfully!");
+        setFormData({
+          name: "",
+          event: "",
+          whatsapp: "",
+        });
+        setShowPopup(false);
+      },
+      onError: (err) => {
+        console.error(err);
+        alert("❌ Submission failed");
+      },
+    });
   };
 
   return (
@@ -55,9 +69,12 @@ function Service() {
               data-aos-duration="1000"
             >
               <div className="quote px-3 py-2">
-                <a href="" className="fw-semibold fs-5 outfit btnanimate">
+                <WhatsAppButton
+                  message="Hi, I want to get a quote"
+                  className="fw-semibold fs-5 outfit btnanimate text-white"
+                >
                   GET QUOTE &gt;&gt;{" "}
-                </a>
+                </WhatsAppButton>
               </div>
             </div>
           </div>
@@ -67,7 +84,13 @@ function Service() {
             <div className="col-md-6 col-lg-3 mt-2 mt-md-3" data-aos="fade-up">
               <div className="carded">
                 <div className="img-grp">
-                  <img src={wedcater} alt="" />
+                  <img
+                    src={wedcater}
+                    alt=""
+                    onClick={() => setShowPopup(true)}
+                    data-aos="fade-up"
+                    data-aos-duration="1100"
+                  />
                 </div>
                 <span
                   className="d-inline-block mt-4 mb-2 opacity-50"
@@ -82,7 +105,7 @@ function Service() {
                   <h5
                     className="lato fs-1"
                     data-aos="fade-up"
-                    data-aos-delay="100"
+                    data-aos-delay="110"
                     data-aos-duration="1200"
                     data-aos-easing="ease"
                   >
@@ -103,21 +126,34 @@ function Service() {
             <div className="col-md-6 col-lg-3 mt-3 mt-md-3" data-aos="fade-up">
               <div className="carded">
                 <div className="img-grp">
-                  <img src={corcater} alt="" />
-                  <img src={arrow} alt=""/>
+                  <img
+                    src={corcater}
+                    alt=""
+                    onClick={() => setShowPopup(true)}
+                    data-aos="fade-up"
+                    data-aos-delay="120"
+                    data-aos-duration="1100"
+                  />
                 </div>
-                <span className="d-inline-block mt-4 mb-2 opacity-50"   data-aos="fade-up"
-                  data-aos-delay="150"
+                <span
+                  className="d-inline-block mt-4 mb-2 opacity-50"
+                  data-aos="fade-up"
+                  data-aos-delay="120"
                   data-aos-duration="1200"
-                  data-aos-easing="ease">
+                  data-aos-easing="ease"
+                >
                   CORPORATE MENU EXPERTISE
                 </span>
                 <div className="d-flex align-items-center justify-content-between">
-                  <h5 className="lato fs-1"
-                  data-aos="fade-up"
-                  data-aos-delay="150"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease">CORPORATE CATERING</h5>
+                  <h5
+                    className="lato fs-1"
+                    data-aos="fade-up"
+                    data-aos-delay="120"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
+                  >
+                    CORPORATE CATERING
+                  </h5>
                   <img
                     src={arrow}
                     alt=""
@@ -133,22 +169,35 @@ function Service() {
             <div className="col-md-6 col-lg-3 mt-3 mt-md-3" data-aos="fade-up">
               <div className="carded">
                 <div className="img-grp">
-                  <img src={porcater} alt="" />
-                  <img src={arrow} alt="" />
+                  <img
+                    src={porcater}
+                    alt=""
+                    onClick={() => setShowPopup(true)}
+                    data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
+                    data-aos-delay="150"
+                  />
                 </div>
-                <span className="d-inline-block mt-4 mb-2 opacity-50"                   data-aos="fade-up"
-                  data-aos-delay="200"
+                <span
+                  className="d-inline-block mt-4 mb-2 opacity-50"
+                  data-aos="fade-up"
+                  data-aos-delay="140"
                   data-aos-duration="1200"
                   data-aos-easing="ease"
-               >
+                >
                   MULTI-CUISINE MENU OPTIONS
                 </span>
                 <div className="d-flex align-items-center justify-content-between">
-                  <h5 className="lato fs-1"                   data-aos="fade-up"
-                  data-aos-delay="200"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease"
-                 >PARTY CATERING</h5>
+                  <h5
+                    className="lato fs-1"
+                    data-aos="fade-up"
+                    data-aos-delay="140"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
+                  >
+                    PARTY CATERING
+                  </h5>
                   <img
                     src={arrow}
                     alt=""
@@ -164,27 +213,45 @@ function Service() {
             <div className="col-md-6 col-lg-3 mt-3 mt-md-3" data-aos="fade-up">
               <div className="carded">
                 <div className="img-grp">
-                  <img src={customcater} alt="" />
-                  <img src={arrow} alt="" />
+                  <img
+                    src={customcater}
+                    alt=""
+                    onClick={() => setShowPopup(true)}
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
+                  />
                 </div>
-                <span className="d-inline-block mt-4 mb-2 opacity-50"                   data-aos="fade-up"
-                  data-aos-delay="250"
+                <span
+                  className="d-inline-block mt-4 mb-2 opacity-50"
+                  data-aos="fade-up"
+                  data-aos-delay="160"
                   data-aos-duration="1200"
-                  data-aos-easing="ease" >
+                  data-aos-easing="ease"
+                >
                   FLEXIBLE CATERING PACKAGES
                 </span>
                 <div className="d-flex align-items-center justify-content-between">
-                  <h5 className="lato fs-1"                   data-aos="fade-up"
-                  data-aos-delay="250"
-                  data-aos-duration="1200"
-                  data-aos-easing="ease"
-               >CUSTOM CATERING</h5>
+                  <h5
+                    className="lato fs-1"
+                    data-aos="fade-up"
+                    data-aos-delay="160"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
+                  >
+                    CUSTOM CATERING
+                  </h5>
                   <img
                     src={arrow}
                     alt=""
                     width="40px"
                     height="40px"
                     className="btnanimate"
+                    data-aos="fade-up"
+                    data-aos-delay="160"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease"
                     onClick={() => setShowPopup(true)}
                   />
                 </div>

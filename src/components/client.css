@@ -1,18 +1,19 @@
-
 .client {
-    padding: 60px 0px;
+    padding: 60px 0;
     background-color: #FCF8E3;
 }
-.client-wrapper{
+
+.client-wrapper {
     background-color: #903728;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 12px;
+    padding: 40px 20px;
 }
 
+/* Title */
 .client-say {
     text-align: center;
     color: #FCF8E3;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 500;
 }
 
@@ -25,40 +26,44 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-.client-card>p{
-    margin: 0px !important;
-}
-.client-card p>p{
-    margin-bottom: 0px;
-}
 
+    height: 100%;
+}
 
 .client-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Image */
-.client-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    transform: translateY(-6px);
 }
 
 /* Name */
 .client-name {
     font-weight: 600;
-    margin-top: 10px;
+    margin-bottom: 6px;
 }
 
 /* Stars */
+.star-container {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
 .star {
     width: 16px;
-    margin-right: 2px;
 }
 
 /* Text */
 .client-text {
-    font-size: 12px;
+    font-size: 13px;
     color: #555;
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex-grow: 1;
+}
+
+.client-text p {
+    margin: 0;
 }

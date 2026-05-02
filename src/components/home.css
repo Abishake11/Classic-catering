@@ -13,12 +13,13 @@
 
 .home h1{
     font-size: 80px;
-    max-width: 80%;
+    max-width: 100%;
     color: #FCF8E3;
+    line-height: 70px;
 }
 .home h3{
     font-size: 60px;
-    margin: 20px 0px;
+    margin: 18px 0px;
     color: #FCF8E3;
 }
 .home h1, .home h3 {
@@ -26,7 +27,7 @@
 }
 .enquiry{
     background-color: #FCF8E3;
-    padding: 10px 25px;
+    padding: 8px 27px;
     border-radius: 40px;
 
     display: inline-flex !important;

@@ -18,70 +18,32 @@ function About() {
           <div className="row">
             <div
               className="col-lg-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-easing="ease"
+               data-aos="fade-up"
+               data-aos-duration="1200"
             >
               <div className="card-1">
-                <h3
-                  className="fs-1 outfit"
-                  data-aos-duration="1200"
-                  data-aos-delay="200"
-                  data-aos="fade-up"
-                >
-                  COMPLETE CATERING SERVICE
-                </h3>
+                <h3 className="fs-1 outfit"  data-aos="fade-up"
+                    data-aos-delay="120"
+                    data-aos-duration="1200">COMPLETE CATERING SERVICE</h3>
+
                 <div className="icons-grp d-flex gap-2 align-items-center mt-5">
-                  <div className="icon1">
-                    <img
-                      src={ic1}
-                      alt=""
-                      data-aos-duration="1200"
-                      data-aos-delay="205"
-                      data-aos="fade-up"
-                    />
-                    <p
-                      className="w-75 outfit"
-                      data-aos-duration="1200"
-                      data-aos-delay="205"
-                      data-aos="fade-up"
-                    >
-                      Trained Service Staff
-                    </p>
+                  <div className="icon1"  data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="1200">
+                    <img src={ic1} alt=""/>
+                    <p className="w-75 outfit">Trained Service Staff</p>
                   </div>
-                  <div className="icon1">
-                    <img
-                      src={ic2}
-                      alt=""
-                      data-aos-duration="1200"
-                      data-aos-delay="208"
-                      data-aos="fade-up"
-                    />
-                    <p
-                      className="w-75 outfit"
-                      data-aos-duration="1200"
-                      data-aos-delay="208"
-                      data-aos="fade-up"
-                    >
-                      Freshly Cooked Food
-                    </p>
+                  <div className="icon1"  data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="1200">
+                    <img src={ic2} alt="" />
+                    <p className="w-75 outfit">Freshly Cooked Food</p>
                   </div>
-                  <div className="icon1">
-                    <img
-                      src={ic3}
-                      alt=""
-                      data-aos-duration="1200"
-                      data-aos-delay="210"
-                      data-aos="fade-up"
-                    />
-                    <p
-                      className="w-75 outfit"
-                      data-aos-duration="1200"
-                      data-aos-delay="210"
-                      data-aos="fade-up"
-                    >
-                      Hassle-Free Execution
-                    </p>
+                  <div className="icon1"  data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="1200">
+                    <img src={ic3} alt="" />
+                    <p className="w-75 outfit">Hassle-Free Execution</p>
                   </div>
                 </div>
               </div>
@@ -89,39 +51,27 @@ function About() {
 
             <div
               className="col-lg-6"
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-easing="ease"
+               data-aos="fade-up"
+                    data-aos-duration="1200"
             >
-              
-            <div className="card-2">
-                <h3
-                  className="outfit fs-1"
-                  data-aos-duration="1200"
-                  data-aos-delay="204"
-                  data-aos="fade-up"
-                >
+              <div className="card-2">
+                <h3 className="outfit fs-1"  data-aos="fade-up"
+                    data-aos-delay="150"
+                    data-aos-duration="1200">
                   CRAVING WEDDING STYLE BIRYANI?
                 </h3>
-                <p
-                  className="outfit fw-lighter fs-5 w-50"
-                  data-aos-duration="1200"
-                  data-aos-delay="208"
-                  data-aos="fade-up"
-                >
+                <p className="outfit fw-lighter fs-5 w-50"  data-aos="fade-up"
+                    data-aos-delay="155"
+                    data-aos-duration="1200">
                   Authentic wedding style biriyani for family and group orders
                 </p>
-                <div
-                  className="btn-grp mt-2"
-                  data-aos-duration="1200"
-                  data-aos-delay="210"
-                  data-aos="fade-up"
-                >
+                <div className="btn-grp btnanimate"  data-aos="fade-up"
+                    data-aos-delay="160"
+                    data-aos-duration="1200">
                   <h4 className="outfit">ORDER BUCKET BIRYANI</h4>
                   <img src={rarrow} alt="" />
                 </div>
-            </div>
-            
+              </div>
             </div>
           </div>
         </div>
@@ -134,22 +84,19 @@ function About() {
             <div className="col-md-6">
               <h3
                 className="outfit fs-2 fw-medium w-80"
+                div
                 data-aos="fade-up"
-                data-aos-delay="190"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
+                    data-aos-delay="120"
+                    data-aos-duration="1200"
               >
                 Crafting Memorable Events with Authentic Flavours & Professional
                 Catering
               </h3>
             </div>
             <div className="col-md-6">
-              <p
-                data-aos="fade-up"
-                data-aos-delay="190"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-              >
+              <p data-aos="fade-up"
+                    data-aos-delay="130"
+                    data-aos-duration="1200">
                 With years of experience in wedding catering, corporate events,
                 & customised menus, we focus on quality ingredients, seamless
                 execution, and customer satisfaction making every event a
@@ -160,20 +107,18 @@ function About() {
         </div>
       </div>
 
-      {/* about numbers section */}
+     {/* about numbers section */}
       <section className="py-5 about-numbers">
         <div className="container-set">
           <div className="about-numbers-wrapper">
-            <div className="d-flex numbers">
+            <div
+              className="d-flex numbers"
+            >
               <div className="num">
                 <div>
-                  <h4
-                    className="outfit fs-2 text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="160"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <h4 className="outfit fs-2 text-center"    data-aos="fade-up"
+                    data-aos-delay="120"
+                    data-aos-duration="1200">
                     <CountUp
                       from={850}
                       to={1000}
@@ -182,17 +127,15 @@ function About() {
                       duration={2}
                       className="count-up-text"
                       delay={0}
+
+                    
                     />
                     +
                   </h4>
 
-                  <p
-                    className="outfit fs-4 fw-light text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="170"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <p className="outfit fs-4 fw-light text-center"  data-aos="fade-up"
+                    data-aos-delay="122"
+                    data-aos-duration="1200">
                     Events Completed
                   </p>
                 </div>
@@ -200,13 +143,9 @@ function About() {
               </div>
               <div className="num">
                 <div>
-                  <h4
-                    className="outfit fs-2 text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="162"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <h4 className="outfit fs-2 text-center"    data-aos="fade-up"
+                    data-aos-delay="123"
+                    data-aos-duration="1200">
                     {" "}
                     <CountUp
                       from={19500}
@@ -216,16 +155,14 @@ function About() {
                       duration={1.3}
                       className="count-up-text"
                       delay={0}
+
+            
                     />
                     +
                   </h4>
-                  <p
-                    className="outfit fs-4 fw-light text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="163"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <p className="outfit fs-4 fw-light text-center"    data-aos="fade-up"
+                    data-aos-delay="126"
+                    data-aos-duration="1200">
                     Happy Guests Served
                   </p>
                 </div>
@@ -233,13 +170,9 @@ function About() {
               </div>
               <div className="num">
                 <div>
-                  <h4
-                    className="outfit fs-2 text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="164"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <h4 className="outfit fs-2 text-center"  data-aos="fade-up"
+                    data-aos-delay="129"
+                    data-aos-duration="1200">
                     {" "}
                     <CountUp
                       from={0}
@@ -252,13 +185,9 @@ function About() {
                     />
                     +
                   </h4>
-                  <p
-                    className="outfit fs-4 fw-light text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="165"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <p className="outfit fs-4 fw-light text-center"  data-aos="fade-up"
+                    data-aos-delay="132"
+                    data-aos-duration="1200">
                     Expert Staff
                   </p>
                 </div>
@@ -266,13 +195,9 @@ function About() {
               </div>
               <div className="num">
                 <div>
-                  <h4
-                    className="outfit fs-2 text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="166"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <h4 className="outfit fs-2 text-center"  data-aos="fade-up"
+                    data-aos-delay="135"
+                    data-aos-duration="1200">
                     {" "}
                     <CountUp
                       from={0}
@@ -285,13 +210,9 @@ function About() {
                     />
                     +
                   </h4>
-                  <p
-                    className="outfit fs-4 fw-light text-center"
-                    data-aos="fade-up"
-                    data-aos-delay="167"
-                    data-aos-duration="1200"
-                    data-aos-easing="ease"
-                  >
+                  <p className="outfit fs-4 fw-light text-center"  data-aos="fade-up"
+                    data-aos-delay="138"
+                    data-aos-duration="1200">
                     Years of Experience
                   </p>
                 </div>

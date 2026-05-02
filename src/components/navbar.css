@@ -93,7 +93,7 @@
 
 @media (max-width:576px){
     .navbar{
-         background-color:;
+         background-color: transparent;
          top: 0px;
          z-index: 3;
     }
@@ -114,7 +114,7 @@
     left: 0;
     width: 100%;        /* full screen width, nothing pokes outside */
     height: 110vh;
-    padding-top: 200px;
+    padding-top: 230px;
     background: #903728;
     transform: translateY(-110%);   /* hides upward instead */
     transition: transform 1.5s ease-in-out;
@@ -123,14 +123,10 @@
   .mobile-drawer.open {
     transform: translateY(27px);
   }
-  .mobile-drawer>ul>li{
-    margin: 3px 0px;
-  }
-  .mobile-drawer a{
-    font-size:12px !important;
+  .nav-link{
+    font-size: 11px !important;
   }
   .taste{
-    padding: 5px 15px;
     display: flex;
     align-items: center;
   }

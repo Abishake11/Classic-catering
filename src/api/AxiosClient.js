@@ -3,7 +3,7 @@ import { useAuthStore } from "../store/authStore";
 
 // Create instance
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // change to your backend
+  baseURL: "https://classic-caters-backend.vercel.app/api", // change to your backend
 });
 
 // 🔐 REQUEST INTERCEPTOR → attach token
