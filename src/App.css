@@ -1,0 +1,88 @@
+@import "tailwindcss";
+/* header section */
+header{
+  background-color: #710014;
+  color: #FCF8E3;
+  padding: 20px 0px;
+}
+
+.header-wrapper{
+  display: flex;
+}
+.header-wrapper>div{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 25px;
+}
+.header-wrapper>div>div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taste{
+  background-color: #FCF8E3;
+  color: #710014;
+  padding: 5px 12px;
+  border-radius: 20px;
+   transition: transform 0.3s ease;
+}
+.taste:hover{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1.1);
+}
+.taste:hover>span{
+  font-weight: 600;
+  scale: 1;
+}
+.insta,.fb{
+  transition: transform 0.3s ease;
+}
+.insta:hover,.fb:hover{
+    transform: scale(1.1);
+
+}
+
+@media (max-width:1185px) {
+  .pop{
+    font-size: 12px;
+  }
+}
+
+@media (max-width:1020px) {
+  .pop{
+    font-size: 10px;
+  }
+}
+
+@media (max-width:800px) {
+  .pop{
+    font-size: 8px;
+  }
+}
+
+@media (max-width:576px) {
+  header{
+    display: none;
+  }
+}
+
+@media (max-width:450px) {
+
+ .taste{
+  background-color: #FCF8E3;
+  color: #710014;
+  padding: 5px 12px;
+}
+.header-wrapper>div{
+  justify-content: start;
+}
+.insta{
+  width: 15px;
+}
+.fb{
+  width: 15px;
+}
+}

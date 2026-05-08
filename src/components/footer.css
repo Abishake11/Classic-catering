@@ -1,0 +1,87 @@
+
+.contact-section {
+  background: #710014; /* same brown tone */
+  height: fit-content;
+}
+.contact-section h2,.contact-section p{
+    color: #FCF8E3;
+}
+
+
+/* Arrow */
+.sarrow {
+  font-size: 40px;
+  transform: rotate(310deg);
+  margin: 15px 0px;
+}
+
+/* Social Icons */
+.contact-section i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Instagram Boxes */
+.insta-box {
+  background: #bfbfbf;
+  border-radius: 2px;
+  height: 70px;
+  width: 60px;
+  overflow: hidden;
+}
+.insta-box img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: center;
+}
+
+
+
+/* Menu */
+.contact-section ul li {
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.contact-section ul li>a{
+  color: #FFFFFF;
+}
+@media (max-width:1200px) {
+  .contact-section h2{
+    font-size: 20px !important;
+  }
+}
+
+/* Mobile Fix */
+@media (max-width: 576px) {
+
+  .contact-section ul,
+  .contact-section p {
+    text-align: left !important;
+  }
+
+  .insta-box {
+    width: 50px;
+    height: 60px;
+  }
+}
+
+@media (max-width:450px) {
+  .insta-box>a>img{
+   width: 100%;
+  }
+}
+
+@media (max-width:556px) {
+.contact-section .row>.col-sm-6:nth-child(1)>div{
+  margin-top: 10px !important;
+}
+.contact-section .row>.col-sm-6:nth-child(1)>div>a>img{
+  width: 24px;
+}
+
+.custom-second{
+ margin-top: 30px;
+}
+}

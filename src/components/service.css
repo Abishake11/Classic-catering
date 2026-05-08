@@ -1,0 +1,210 @@
+
+.service{
+    padding: 40px 0px !important;
+    background-color: #f8f7ee !important;
+}
+.service h2{
+    max-width: 60%;
+    color: #710014;
+}
+.quote {
+    background-color: #710014;
+    border-radius: 50px; 
+    display: inline-block;   
+}
+
+.quote a {
+    color: #FCF8E3;
+    white-space: nowrap;      
+    display: inline-block;
+    padding: 10px 20px;           
+}
+
+
+/* responsive */
+
+@media (max-width:1500px) {
+    .service h5{
+        font-size: 30px!important;
+        max-width: 50%;
+    }
+}
+
+@media (max-width:1400px) {
+    .service a{
+        font-size: 20px;
+    }
+    .service h2{
+        max-width: 80% !important;
+    }
+}
+
+@media (max-width:1300px) {
+    .service h5{
+        font-size: 20px !important;
+    }
+}
+@media (max-width:992px){
+    .service h2{
+        font-size: 50px;
+        max-width: 80%;
+    }
+}
+@media (max-width:900px) {
+    .quote>a{
+       font-size: 15px !important;
+    }
+    .service h2{
+        font-size: 45px;
+    }
+}
+@media (max-width:556px) {
+    .service h2{
+        max-width: 100% !important;
+        font-size: 40px !important;
+    }
+    .quote{
+        margin-top: 25px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+.carded{
+    width: 100%;
+}
+.carded .img-grp{
+    position: relative;
+    width: 100%;
+}
+.carded .img-grp>img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carded .img-grp>img:nth-child(2){
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+}
+.carded h5{
+    color: #000000;
+}
+@media (max-width:768px) {
+    .carded{
+        margin-top: 30px;
+    }
+}
+@media (max-width:500px) {
+    .carded>div:nth-child(3)>img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* popup css */
+
+/* Image */
+.image {
+  cursor: pointer;
+  width: 200px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.popup.show {
+  animation: fadeDown 0.4s ease forwards;
+}
+/* for popupbox animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup h2{
+    margin: 6px auto !important;
+}
+@media (max-width:556px) {
+    .popup h2{
+        font-size: 25px !important;
+    }
+}
+
+/* Inputs */
+.popup input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: #7a7a7a 1px solid ;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.popup button {
+  margin:   10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+      transition: transform 0.3s ease;
+  background-color: #7a7a7a;
+  color: rgb(249, 244, 235);
+
+}
+.popup button:hover{
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+     transform: scale(1.1);
+
+}
+
+@media (max-width:900px) {
+    .popup {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+}
+
+@media (max-width:500px) {
+    .popup {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+  height: 330px;
+}
+}

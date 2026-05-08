@@ -1,0 +1,40 @@
+.form-2{
+        background: #f6dacf;
+    padding: 70px 0px;
+}
+.form-2 p{
+    margin: 0px;
+}
+.para{
+    color: #710014;
+}
+textarea{
+    border: none !important;
+    border-radius: 10px;
+    background-color: #ddb9b3 !important;
+    min-height: 300px;
+    resize: none !important;
+}
+.form-2 input{
+    background-color:#ddb9b3;
+    border: none;
+}
+.form2-btn{
+margin-top: 15px;
+background-color: #710014;
+width: 100%;
+padding: 10px;
+display: flex;
+justify-content: center;
+border-radius: 20px;
+}
+
+.form2-btn>a{
+    color: #f6e2cc;
+    text-align: center;
+}
+.form-2 textarea{
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+}

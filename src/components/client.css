@@ -1,0 +1,70 @@
+.client {
+    padding: 60px 0;
+            background: #f6dacf;
+
+}
+
+.client-wrapper {
+    background-color: #710014;
+    border-radius: 12px;
+    padding: 40px 20px;
+}
+
+/* Title */
+.client-say {
+    text-align: center;
+    color: #FCF8E3;
+    font-size: 42px;
+    font-weight: 500;
+}
+
+/* Card */
+.client-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between !important;
+    height: 400px;
+}
+@media (max-width:768px) {
+.client-card{
+    display: flex;
+    flex-direction: column;
+    min-height: 310px;
+}
+}
+
+.client-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Name */
+.client-name {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Stars */
+.star-container {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.star {
+    width: 16px;
+}
+
+/* Text */
+.client-text {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.client-text p {
+    margin: 0;
+}

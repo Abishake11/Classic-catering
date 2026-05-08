@@ -1,0 +1,138 @@
+
+
+
+.navbar{
+    position: absolute !important;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.logo{
+    width: 200px;
+}
+.taste{
+    background-color: #F2F1EF;
+}
+.pop{
+    color: #710014;
+}
+.navbar .container-fluid{
+      margin: 0px 100px;
+      padding: 0px;
+}
+.navbar-nav{
+    gap: 33px;
+    align-items: center;
+}
+
+.navbar-nav>li:nth-child(5)>a{
+    padding-right: 0px !important;
+}
+
+.navbar-nav>li:nth-child(6){
+        display: none;
+}
+
+.navbar-nav>li:nth-child(7){
+        display: none;
+}
+
+.nav-link{
+    color: #FCF8E3 !important;
+    font-weight: 500 !important;
+    position: relative;
+    display: inline-block !important;
+    padding: 0px 0px !important;
+}
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 0%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.navbar-toggler{
+    border: none !important;
+}
+/* navbar toggler  */
+.navbar-toggler:focus{
+    text-decoration: none !important;
+    box-shadow: none!important;
+}
+
+/* responsive */
+@media (max-width:970px) {
+    .logo{
+        width: 130px;
+    }
+}
+
+@media (max-width:850px) {
+    .nav-link{
+        font-size: 10px !important;
+    }
+}
+@media (max-width:740px) {
+    .logo{
+        width: 80px;
+    }
+    .navbar-nav{
+        gap: 10px;
+    }
+}
+@media (max-width:768px) {
+    .container-fluid{
+        margin: 0px 50px !important;
+    }
+}
+
+@media (max-width:576px){
+    .navbar{
+         background-color: transparent;
+         top: 0px;
+         z-index: 3;
+    }
+    .navbar-nav>li:nth-child(6){
+        display: block;
+    }
+
+    .navbar-nav>li:nth-child(7){
+        display: block;
+    }
+}
+
+/* Only applies on mobile — matches your existing breakpoint */
+@media (max-width: 576px) {
+   .mobile-drawer {
+    position: fixed !important;
+    top: -30px;
+    left: 0;
+    width: 100%;        /* full screen width, nothing pokes outside */
+    height: 110vh;
+    padding-top: 230px;
+    background: #710014;
+    transform: translateY(-110%);   /* hides upward instead */
+    transition: transform 1.5s ease-in-out;
+    z-index: -1;
+  }
+  .mobile-drawer.open {
+    transform: translateY(27px);
+  }
+  .nav-link{
+    font-size: 11px !important;
+  }
+  .taste{
+    display: flex;
+    align-items: center;
+  }
+}

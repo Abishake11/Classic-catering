@@ -1,0 +1,112 @@
+
+.home{
+ background-color: rgb(164, 134, 95);
+ min-height: 100vh;
+ padding-top: 180px;
+ padding-bottom: 20px;
+
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ transition: background-image 1s ease-in-out;
+}
+
+.home h1{
+    font-size: 80px;
+    max-width: 100%;
+    color: #F2F1EF;
+    line-height: 70px;
+}
+.home h3{
+    font-size: 60px;
+    margin: 18px 0px;
+    color: #F2F1EF;
+}
+.home h1, .home h3 {
+  animation: fade 2s ease;
+}
+.enquiry{
+    background-color: #F2F1EF;
+    padding: 7px 20px;
+    border-radius: 40px;
+    color: #710014 !important;
+
+    display: inline-flex !important;
+    gap: 10px;
+    align-items: center;
+}
+.enquiry>img{
+    width: 30px;
+}
+.enquiry>a{
+    color: #710014;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@media (max-width:992px) {
+    .home h1{
+        font-size: 60px;
+        max-width: 90%;
+    }
+    .home h3{
+        font-size: 40px;
+    }
+    .enquiry>img{
+        width: 20px;
+    }
+    .enquiry>a{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:556px) {
+    .home{
+      padding-top: 250px;
+    }
+}
+
+/* smooth background transition */
+.home {
+  transition: background-image 1s ease-in-out;
+}
+
+/* dots */
+.dots {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #F2F1EF;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  transform: scale(1.3);
+  background: #710014;
+}
+
+/* optional animation */
+.home h1, .home h3 {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .dots {
+    justify-content: center;
+  }
+}
